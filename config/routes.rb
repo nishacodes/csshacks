@@ -1,4 +1,6 @@
 Csshacks::Application.routes.draw do
+  resources :hacks
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
