@@ -1,29 +1,40 @@
-<h1>Listing hacks</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Css</th>
-    <th>Html</th>
-    <th>Html display</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="css-carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#css-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#css-carousel" data-slide-to="1"></li>
+    <li data-target="#css-carousel" data-slide-to="2"></li>
+  </ol>
 
-<% @hacks.each do |hack| %>
-  <tr>
-    <td><%= hack.title %></td>
-    <td><%= hack.css %></td>
-    <td><%= hack.html %></td>
-    <td><%= hack.html_display %></td>
-    <td><%= link_to 'Show', hack %></td>
-    <td><%= link_to 'Edit', edit_hack_path(hack) %></td>
-    <td><%= button_to 'Destroy', hack, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= render 'slidecontent', hack: @hacks.first %>
+    </div>
+      <% @hacks.drop(1).each do |hack| %>
+        <div class="item">
+          <%= render 'slidecontent', hack: hack %>
+        <!-- <div class="carousel-caption"></div> -->
+        </div>
+      <% end %>
+  </div>
 
-<br />
+  <!-- Controls -->
+  <a class="left carousel-control" href="#css-carousel" data-slide="prev">
+    <!-- <span class="glyphicon glyphicon-chevron-left"></span> -->
+    <%= image_tag "arrow-left.png", :class=>"arrow"%>
+  </a>
+  <a class="right carousel-control" href="#css-carousel" data-slide="next">
+    <!-- <span class="glyphicon glyphicon-chevron-right"></span> -->
+    <%= image_tag "arrow-right.png", :class=>"arrow"%>
+  </a>
+</div>
+
+    <%#= link_to 'Show', hack %>
+    <%#= link_to 'Edit', edit_hack_path(hack) %>
+    <%#= button_to 'Destroy', hack, confirm: 'Are you sure?', method: :delete %>
+
+
 
 <%#= link_to 'New Hack', new_hack_path %>

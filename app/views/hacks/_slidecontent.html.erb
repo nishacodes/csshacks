@@ -1,0 +1,47 @@
+<div class="container">
+  
+  <!-- TITLE -->
+  <div class="col-md-12"> 
+    <h2> <%= "##{hack.id}.  #{hack.title}" %></h2>
+  </div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li><a href=".hack" data-toggle="tab">Hack</a></li>
+    <li><a href=".code" data-toggle="tab">Code</a></li>
+    
+    <!-- <li><a href="#html" data-toggle="tab">HTML</a></li> -->
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <!-- RESULTS -->
+    <div class="tab-pane active hack">
+      <!-- HTML FOR ENTRY HERE -->
+      <div class="style-container">
+        <%= hack.html.html_safe %>
+      </div>
+      <!-- CSS FOR ENTRY HERE -->
+      <style>
+        <%= hack.css %>
+      </style>
+      <%= button_to 'Destroy', hack, confirm: 'Are you sure?', method: :delete %> 
+    </div>
+    
+    <!-- CODE  -->
+    <div class="tab-pane code">
+      <div class="col-md-6"> 
+        <h4> CSS </h4>
+        <pre class="prettyprint"> 
+          <%= hack.css %>
+        </pre>
+      </div>
+      <div class="col-md-6"> 
+        <h4> HTML </h4>
+        <pre class="prettyprint"> 
+          <%= hack.html_display.html_safe %>
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
