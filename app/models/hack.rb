@@ -7,4 +7,6 @@ class Hack < ActiveRecord::Base
     html.gsub("<","&lt;").gsub(">","&gt;")
   end
 
+  belongs_to :user
+
 end
