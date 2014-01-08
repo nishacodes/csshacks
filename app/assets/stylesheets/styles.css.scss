@@ -4,8 +4,10 @@ h1 { /*logo*/
   letter-spacing: 4px;
   position: relative;
   left: 20px;
+  top: 8px;
   font-size: 18pt;
   margin-bottom: 15px;
+  display: inline;
 }
 
 h2 { /*title of entry*/
@@ -30,11 +32,12 @@ h4 {/* html, css headings*/
 }
 
 .new-button {
-  position: absolute;
-  right: 20px;
-  top: 8px;
+  position: relative;
+  
+  margin: 5px 10px;
   background-color: #E0BC28;
   border: none;
+  display: inline;
 }
 
 .new-button:hover {

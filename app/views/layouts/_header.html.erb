@@ -1,10 +1,43 @@
-<div class="navbar">
-  <h1> CSS HACKS</h1>
+<div class="navbar" >
+  
+
+  <ul class="nav navbar-nav navbar-left">
+    <li><h1> CSS HACKS</h1></li>
+  </ul>
   
   <!-- Button trigger modal -->
-  <button class="btn btn-primary btn-lg pull-right new-button" data-toggle="modal" data-target="#myModal">
-    Create New
-  </button>
+  <ul class="nav navbar-nav navbar-right">
+    <% if user_signed_in? %>
+      <li>
+        <button class="btn btn-primary btn-lg new-button" data-toggle="modal" data-target="#myModal">
+          Create New
+        </button>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <b class="caret"></b>
+          <%= "Hi, #{current_user.email}" %>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li class="divider"></li>
+          <li><%= button_to "Logout", destroy_user_session_path, method: :delete %> </li>
+        </ul>
+      </li>
+    <% else %>
+      <li>
+        
+          <%= button_to "Sign in", new_user_session_path, :class => "btn btn-primary btn-lg new-button"%> 
+        
+      </li>
+    <%end%>
+
+  </ul>
+
+
 </div>
 
 <%= render 'hacks/form' %>
