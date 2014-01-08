@@ -3,6 +3,7 @@ class HacksController < ApplicationController
   # GET /hacks.json
   def index
     @hacks = Hack.all
+    @hack = Hack.new
 
     respond_to do |format|
       format.html # index.html.erb
