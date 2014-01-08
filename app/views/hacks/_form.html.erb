@@ -23,11 +23,36 @@
     <%= f.label :html %><br />
     <%= f.text_area :html %>
   </div>
-  <div class="field">
-    <%= f.label :html_display %><br />
-    <%= f.text_area :html_display %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Enter the code for your hack</h4>
+      </div>
+      <form action="/2" method="POST"> <!-- SUBSTITUTE ROUTE NUMBER FOR ID OF NEW ENTRY -->
+      
+        <!-- FORM FIELDS -->
+        <div class="modal-body">
+          <input type="text" class="form-control title" name="title" placeholder="Title"><br/>
+          
+          <input type="textarea" class="form-control css" rows="5" name="css" placeholder="CSS"><br/>
+          <input type="textarea" class="form-control html" name="html" placeholder="HTML"><br/>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+        </div>
+
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

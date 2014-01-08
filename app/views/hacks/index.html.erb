@@ -19,7 +19,7 @@
     <td><%= hack.html_display %></td>
     <td><%= link_to 'Show', hack %></td>
     <td><%= link_to 'Edit', edit_hack_path(hack) %></td>
-    <td><%= link_to 'Destroy', hack, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= button_to 'Destroy', hack, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

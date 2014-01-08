@@ -41,6 +41,7 @@ class HacksController < ApplicationController
   # POST /hacks.json
   def create
     @hack = Hack.new(params[:hack])
+    @hack.html_display = @hack.format_html
 
     respond_to do |format|
       if @hack.save
