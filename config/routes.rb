@@ -1,4 +1,6 @@
 Csshacks::Application.routes.draw do
+  devise_for :users
+
   resources :hacks
 
   root :to => "hacks#index"
