@@ -9,8 +9,12 @@
   <ul class="nav nav-tabs">
     <li><a href=".hack" data-toggle="tab">Hack</a></li>
     <li><a href=".code" data-toggle="tab">Code</a></li>
-
+  
+  <ul class="nav nav-tabs navbar-right"  >
+    <li><a> <%= "Created by: #{current_user.first_name}" %></a></li>
+    <li><a> <%= button_to 'Destroy', hack, confirm: 'Are you sure?', method: :delete %></a></li>
     <!-- <li><a href="#html" data-toggle="tab">HTML</a></li> -->
+  </ul>
   </ul>
 
   <!-- Tab panes -->
@@ -25,7 +29,7 @@
       <style>
         <%= hack.css %>
       </style>
-      <%= button_to 'Destroy', hack, confirm: 'Are you sure?', method: :delete %> 
+       
     </div>
     
     <!-- CODE  -->
