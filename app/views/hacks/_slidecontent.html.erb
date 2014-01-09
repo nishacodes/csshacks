@@ -11,7 +11,7 @@
     <li><a href=".code" data-toggle="tab">Code</a></li>
   
   <ul class="nav nav-tabs navbar-right"  >
-    <li><a> <%= "Created by: #{current_user.first_name}" %></a></li>
+    <li><a> <%= "Created by: #{hack.user.first_name}" %></a></li>
     <li><a> <%= button_to 'Destroy', hack, confirm: 'Are you sure?', method: :delete %></a></li>
     <!-- <li><a href="#html" data-toggle="tab">HTML</a></li> -->
   </ul>

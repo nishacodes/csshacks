@@ -1,0 +1,9 @@
+<h2> <%= "#{@name}'s Hacks" %> </h2>
+
+<% @user.hacks. each do |hack| %>
+  <ul>
+    <li>
+      <%= hack.title %>
+    </li>
+  </ul>
+<% end %>

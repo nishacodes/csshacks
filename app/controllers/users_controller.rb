@@ -1,10 +1,11 @@
-class Users::SessionsController < Devise::SessionsController
+class UsersController < ApplicationController
   
   def show
-    @user = current_user
+    @user = User.find(params[:id])
+    @name = @user.first_name
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render "users/sessions/show"}
       format.json { render json: @user }
     end
   end
