@@ -13,7 +13,7 @@
       <%= render 'slidecontent', hack: @hacks.first %>
     </div>
       <% @hacks.drop(1).each do |hack| %>
-        <div class="item">
+        <div class="item" id="<%=hack.id%>">
           <%= render 'slidecontent', hack: hack %>
         <!-- <div class="carousel-caption"></div> -->
         </div>

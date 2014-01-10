@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :new_hack
   
   def new_hack
-     @hack = Hack.new
+    @hack = Hack.new
   end
 
 
