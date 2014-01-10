@@ -11,18 +11,18 @@
     <%= stylesheet_link_tag "styles", :media => "all" %>
     <!-- PRETTYPRINT For Syntax Highlighting -->
     <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" type="text/css" rel="stylesheet"/>
-   
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
     <% flash.each do |name, msg| %>
         <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
     <% end %>
-    <%= render 'layouts/header' %>
     <%= yield %>
 
     <!-- JS -->
+    
     <script type="text/javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
     <body onload="prettyPrint()">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

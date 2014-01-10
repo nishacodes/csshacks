@@ -1,12 +1,10 @@
 Csshacks::Application.routes.draw do
   devise_for :users 
-    
-  
   resources :hacks
-  get "users/:id" => "users#show"
+
   root :to => "hacks#index"
-
-
+  
+  get "users/:id" => "users#show"
 
   # this uses users_controller instead of the inherent devise controller; need to keep the view structure consistent
   devise_for :users, :controllers => { :sessions => "users/sessions" }

@@ -1,16 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.0'
-gem 'jquery-rails'
+gem 'jquery-rails','~> 2.1'
 gem 'devise'
-
+gem 'haml'
+gem 'haml-rails'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :production do 
   gem 'pg'
 end
-
+  
 
 group :development, :test do 
   gem 'debugger'
