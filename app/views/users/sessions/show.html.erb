@@ -3,9 +3,7 @@
 <% @user.hacks. each do |hack| %>
   <ul>
     <li>
-      <a href="/hacks/#<%= hack.id %>">
-        <%= hack.title %>
-      </a>
+      <%= link_to hack.title, "/hacks/##{hack.id}" %>
     </li>
   </ul>
 <% end %>

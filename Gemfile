@@ -5,6 +5,8 @@ gem 'jquery-rails','~> 2.1'
 gem 'devise'
 gem 'haml'
 gem 'haml-rails'
+# gem "sass_rails_patch", "~> 0.0.2" # is this necessary for erb in sass?
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
