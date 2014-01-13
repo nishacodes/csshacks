@@ -9,6 +9,10 @@ class Hack < ActiveRecord::Base
     html.gsub("<","&lt;").gsub(">","&gt;")
   end
 
+  def nest_css
+    ".style-container {" + css + "}"
+  end
+
   
 
 end
