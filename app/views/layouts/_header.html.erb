@@ -1,17 +1,16 @@
 <div class="navbar" >
-  <ul class="nav navbar-nav navbar-left">
-    <li><a href="#">CSS HACKS</a></li>
+  <ul class="nav navbar-nav navbar-left nav-main">
+    <li><a href="/" class="brand ">CSS HACKS</a></li>
   </ul>
   
   <!-- Button trigger modal -->
-  <ul class="nav navbar-nav navbar-right">
+  <ul class="nav navbar-nav navbar-right nav-main">
       
-      <li><a href="#css-carousel">Gallery</a></li>
+      <li><a href="/#css-carousel" class="active">Gallery</a></li>
       <li><a href="#">Categories</a></li>
       <li><a href="#">About</a></li>
       
     <% if user_signed_in? %>
-
       <li>
         <!-- <button class="btn navbar-btn"> -->
           <%#= link_to "New Hack", :toggle => "modal", :target=>"#myModal" %>

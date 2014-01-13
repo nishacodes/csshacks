@@ -7,7 +7,7 @@ $mainfont: 'Open Sans','Roboto', 'Helvetica', 'Arial', sans-serif;
 // GENERIC STYLES
 
 body {
-  font-family: 'Open Sans','Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: $mainfont;
 }
 
 .block {
@@ -84,17 +84,6 @@ img.arrow {
 
 // TEXT STYLES
 
-h1 { /*logo*/
-  font-family: $mainfont;
-  color: gray;
-  letter-spacing: 4px;
-  position: relative;
-  left: 20px;
-  top: 8px;
-  font-size: 18pt;
-  margin-bottom: 15px;
-  display: inline;
-}
 
 h2 { /*title of entry*/
   font-family: $mainfont;
@@ -102,7 +91,7 @@ h2 { /*title of entry*/
   text-align: center;
   letter-spacing: 2px;  
   padding: 30px 0px 30px 0px;
-  margin-top: 60px;
+  // margin-top: 60px;
   font-weight: 100;
 }
 
@@ -114,7 +103,13 @@ a {
   color: $maincolor;
 }
 
-.nav li a {
+// NAV STYLES
+
+a.brand {
+  font-size: 1.5em;
+}
+
+.nav-main li a {
   border-top: solid 3px rgba(0,0,0,0);
   color: black;
   font-family: $mainfont;
@@ -132,6 +127,18 @@ a {
   border: none;
   text-decoration: none;
 }
+
+
+.btn.tab {
+  border: solid 1px white;
+  &:active {
+    background-color: $maincolor;
+  }
+}
+
+.navbar-right {
+  border: none;
+}
 // SCAFFOLDING
 
 .navbar, .navbar-default, .navbar-header {
@@ -147,7 +154,8 @@ a {
 
 .container {
   margin: 0 auto;
-  min-height: 900px;
+  min-height: 750px;
+  padding: 50px 150px;
   /*background-color: rgba(255,255,255,0.5);*/
 }
 
@@ -159,6 +167,26 @@ a {
 
 .carousel-control {
   padding-top: 20%;
+}
+
+footer {
+  background-color: $maincolor;
+  height: 80px;
+}
+
+ul.footer, ul.footer a {
+  color: white;
+  & li {
+    margin-left: 30px;
+  }
+}
+
+// HACK CONTAINER
+
+.style-container {
+  padding: 50px;
+  text-align: center;
+  font-size: 16pt;
 }
 
 
@@ -218,9 +246,4 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   pre .atv, code .atv { color: #fff; }
 }
 
-// .style-container {
-//   padding: 50px;
-//   text-align: center;
-//   font-size: 16pt;
-//    
-// }
+

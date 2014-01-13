@@ -1,4 +1,6 @@
-<%= render 'welcome' %>
+<% unless user_signed_in? %>
+  <%= render 'welcome' %>
+<% end %>
 
 <div id="css-carousel" class="carousel slide" data-ride="carousel">
 
