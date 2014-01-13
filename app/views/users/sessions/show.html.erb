@@ -1,13 +1,13 @@
 <div class="container">
 
-<h2> <%#= "#{@name}'s Hacks" %> </h2>
+<h2> <%= "#{@name}'s Hacks" %> </h2>
 
-<%# @user.hacks. each do |hack| %>
-<!--   <ul>
+<% @user.hacks. each do |hack| %>
+  <ul>
     <li>
-      <%#= link_to hack.title, "/hacks/##{hack.id}" %>
+      <%= link_to hack.title, "/hacks/##{hack.id}" %>
     </li>
   </ul>
-<%# end %>
+<% end %>
 
-</div> -->
+</div>
