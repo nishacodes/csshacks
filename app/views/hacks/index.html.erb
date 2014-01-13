@@ -1,5 +1,7 @@
 <%= render 'welcome' %>
+
 <div id="css-carousel" class="carousel slide" data-ride="carousel">
+
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#css-carousel" data-slide-to="0" class="active"></li>
@@ -9,15 +11,17 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
+
     <div class="item active">
       <%= render 'slidecontent', hack: @hacks.first %>
     </div>
-      <% @hacks.drop(1).each do |hack| %>
-        <div class="item" id="<%=hack.id%>">
-          <%= render 'slidecontent', hack: hack %>
-        <!-- <div class="carousel-caption"></div> -->
-        </div>
-      <% end %>
+
+    <% @hacks.drop(1).each do |hack| %>
+      <div class="item" id="<%=hack.id%>">
+        <%= render 'slidecontent', hack: hack %>
+      <!-- <div class="carousel-caption"></div> -->
+      </div>
+    <% end %>
   </div>
 
   <!-- Controls -->

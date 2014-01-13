@@ -1,18 +1,24 @@
 <div class="navbar" >
-  
-
   <ul class="nav navbar-nav navbar-left">
-    <li><h1> CSS HACKS</h1></li>
+    <li><a href="#">CSS HACKS</a></li>
   </ul>
   
   <!-- Button trigger modal -->
   <ul class="nav navbar-nav navbar-right">
+      
+      <li><a href="#css-carousel">Gallery</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">About</a></li>
+      
     <% if user_signed_in? %>
-      <li> GALLERY </LI>
+
       <li>
-        <button class="btn navbar-btn" data-toggle="modal" data-target="#myModal">
-          Create New
-        </button>
+        <!-- <button class="btn navbar-btn"> -->
+          <%#= link_to "New Hack", :toggle => "modal", :target=>"#myModal" %>
+        <!-- </button> -->
+        <a href="#" data-toggle="modal" data-target="#myModal">
+          New Hack
+        </a>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <b class="caret"></b>
@@ -28,19 +34,20 @@
           <li><%= button_to "Logout", destroy_user_session_path, method: :delete %> </li>
         </ul>
       </li>
-    <% else %>
-      <li>
-        
-          <%= button_to "Sign in", new_user_session_path, :class => "btn btn-primary btn-lg new-button"%> 
-        
-      </li>
-    <%end%>
 
+    <% else %>
+      
+      <li>
+        <!-- <button class="btn navbar-btn new-button"> -->
+          <%= link_to "Sign in", new_user_session_path, :toggle => "modal", :target=>"#myModal" %>
+        <!-- </button> -->
+      </li>
+
+    <% end %>
   </ul>
 
 
 </div>
 
 <%= render 'hacks/form' %>
-
     

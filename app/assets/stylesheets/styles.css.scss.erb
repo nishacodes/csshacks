@@ -2,6 +2,7 @@ $maincolor: #59BDBD;
 $maincolorlight: #7ACACA;
 $btngray: #cdcfd0;
 $graytext: #9e9e9e;
+$mainfont: 'Open Sans','Roboto', 'Helvetica', 'Arial', sans-serif;
 
 // GENERIC STYLES
 
@@ -23,7 +24,7 @@ body {
 // BUTTON STYLES
 
 .btn-container {
-  width: 370px;
+  width: 420px;
 }
 
 .btn-primary {
@@ -38,6 +39,7 @@ body {
   margin-left: 30px;
   padding: 10px 20px;
   color: white;
+  text-transform: uppercase;
   background-color: $maincolor;
   &:hover {
     background-color: $maincolorlight;
@@ -83,7 +85,7 @@ img.arrow {
 // TEXT STYLES
 
 h1 { /*logo*/
-  font-family: 'Open Sans','Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: $mainfont;
   color: gray;
   letter-spacing: 4px;
   position: relative;
@@ -95,7 +97,7 @@ h1 { /*logo*/
 }
 
 h2 { /*title of entry*/
-  font-family: 'Open Sans','Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: $mainfont;
   font-size: 60px;
   text-align: center;
   letter-spacing: 2px;  
@@ -112,6 +114,24 @@ a {
   color: $maincolor;
 }
 
+.nav li a {
+  border-top: solid 3px rgba(0,0,0,0);
+  color: black;
+  font-family: $mainfont;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 20px;
+  &:hover {
+    background: none;
+    border-color:black;
+  }
+}
+
+.nav li button a {
+  border: none;
+  text-decoration: none;
+}
 // SCAFFOLDING
 
 .navbar, .navbar-default, .navbar-header {
@@ -122,8 +142,8 @@ a {
   background-color: rgba(255,255,255, 0.95);
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
-
 
 .container {
   margin: 0 auto;
