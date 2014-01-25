@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.0'
+gem 'rails', '3.2.16'
 gem 'jquery-rails','~> 2.1'
-gem 'devise'
+gem 'devise', '3.0'
 gem 'haml'
 gem 'haml-rails'
 # gem "sass_rails_patch", "~> 0.0.2" # is this necessary for erb in sass?
