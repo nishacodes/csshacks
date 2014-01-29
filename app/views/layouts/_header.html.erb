@@ -36,7 +36,20 @@
           Sign in <b class="caret"></b>
         </a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <%= render 'users/sessions/new' %>
+          
+          <div class="tab-content">
+            <div class="tab-pane active" id="signin">
+              <%= render 'users/sessions/new' %>
+              <a href="#signup" data-toggle="tab">Sign up</a>
+            </div>
+            <div class="tab-pane" id="signup">
+              <%= render 'users/registrations/new' %>
+              <a href="#signin" data-toggle="tab">Sign in</a>
+            </div>
+          </div>
+
+          
+          
         </ul>
       </li>
 

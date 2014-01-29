@@ -6,6 +6,8 @@ Csshacks::Application.routes.draw do
   
   get "users/:id" => "users#show"
 
+  
+
   # this uses users_controller instead of the inherent devise controller; need to keep the view structure consistent
   # devise_for :users, :controllers => { :sessions => "users/sessions" }
 
