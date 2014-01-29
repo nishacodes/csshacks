@@ -1,13 +1,4 @@
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Enter the code for your hack</h4>
-      </div>
-      
-      
+
       <%= form_for(@hack) do |f| %>
         <% if @hack.errors.any? %>
           <div id="error_explanation">
@@ -39,7 +30,3 @@
           </div>
         </div>
       <% end %>
-
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->

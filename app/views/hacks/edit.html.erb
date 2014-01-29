@@ -1,6 +1,11 @@
-<h1>Editing hack</h1>
+<div class="container">
+  <h1>Editing hack</h1>
 
-<%= render 'form' %>
+  <%= render 'hacks/form' %>
 
-<%= link_to 'Show', @hack %> |
-<%= link_to 'Back', hacks_path %>
+  <%= link_to 'Show', @hack %> |
+  <%= link_to 'Back', hacks_path %> | 
+  <%= link_to 'Destroy', @hack, confirm: 'Are you sure?', method: :delete %>
+
+
+</div>
