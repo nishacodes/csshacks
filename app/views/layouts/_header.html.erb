@@ -31,11 +31,13 @@
       </li>
 
     <% else %>
-      
-      <li>
-       
-          <%= link_to "Sign in", new_user_session_path, :toggle => "modal", :target=>"#myModal" %>
-       
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+          Sign in <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <%= render 'users/sessions/new' %>
+        </ul>
       </li>
 
     <% end %>
