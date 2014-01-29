@@ -33,11 +33,14 @@ body {
   background-color: $maincolor;
   font-size: 16pt;
   letter-spacing: 2px;
+  border: none;
 }
 
-.btn, .btn:active {
-  border-radius: 0; // override bootstrap
-  border: none; // override bootstrap
+.btn-default {
+  border: none;
+}
+
+.btn, .btn:active, .btn:visited {
   margin: 0 15px;
   padding: 10px 20px;
   color: white;
@@ -47,11 +50,6 @@ body {
     background-color: $maincolorlight;
   }
 }
-
-a.btn:visited {
-  color: white; // override bootstrap
-}
-
 
 
 // ASSET STYLES
@@ -158,14 +156,12 @@ ul.dropdown-menu {
 }
 
 ul.hack-options{
- // background-color: blue;
  display: inline-block;
  width: 100%;
+ border-bottom: 4px solid $maincolor;
 }
 
 ul.hack-options li {
-  // background-color: red;
-  // vertical-align: bottom;
   padding: 10px;
   font-size: 12pt;
 }
@@ -285,3 +281,30 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 }
 
 
+// OVERRIDE BOOTSTRAP //
+
+// for Hack / Code tabs
+.btn-default {
+  color: white;
+  background-color: $maincolorlight;
+}
+
+// for Hack / Code tabs
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: white;
+  background-color: $maincolor;
+}
+
+a.btn:visited {
+  color: white; 
+}
+
+
+.btn, .btn:active, .btn:visited {
+  border-radius: 0; // override bootstrap
+  border: none; // override bootstrap
+}
