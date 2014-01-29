@@ -268,7 +268,6 @@ table {
   }
   .navbar {
     display: none;
-    background-color: rgba(255,255,255,0.2);
   }
   .table td,
   .table th {
@@ -787,7 +786,6 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  /*margin-top: -80px;*/
 }
 
 .container:before,
@@ -4324,9 +4322,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  background-color: rgba(255,255,255,0.2);
-  /*margin-bottom: 20px;*/ 
-  /*border: 1px solid transparent;*/
+  margin-bottom: 20px;
+  border: 1px solid transparent;
 }
 
 .navbar:before,
@@ -4705,9 +4702,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  /*background-color: #f8f8f8;
-  border-color: #e7e7e7;*/
-  background-color: rgba(255,255,255,0.2);
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
 }
 
 .navbar-default .navbar-brand {
@@ -6329,7 +6325,6 @@ button.close {
   border-right-width: 0;
   content: " ";
 }
-
 .carousel {
   position: relative;
 }
@@ -6517,6 +6512,7 @@ button.close {
 .carousel-caption .btn {
   text-shadow: none;
 }
+
 
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicons-chevron-left,
