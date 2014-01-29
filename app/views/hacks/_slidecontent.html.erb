@@ -4,25 +4,27 @@
   <!-- TITLE -->
   <div class="col-md-12"> 
     <h2> <%= hack.title.upcase %></h2>
+  </div>
 
-  </div>
-  <div class="btn-group center-block">
-    <button href=".hack" type="button" data-toggle="tab" class="btn btn-default tab">Hack</button>
-    <button href=".code" type="button" data-toggle="tab" class="btn btn-default tab">Code</button>
-  </div>
 
   <!-- Nav tabs -->
 
-  <ul class="nav nav-tabs">
-    <ul class="nav nav-tabs navbar-right">
-      <li><a> 
-        <% if hack.user %>
-          <%= "Created by: #{hack.user.first_name}" %>
-        <% end %>
-      </a></li>
-      <li><a> <%= link_to "Edit", edit_hack_path(hack) %></a></li>
+  <ul class="nav nav-tabs hack-options">
+    <div class="btn-group center-block">
+      <button href=".hack" type="button" data-toggle="tab" class="btn btn-default tab">Hack</button>
+      <button href=".code" type="button" data-toggle="tab" class="btn btn-default tab">Code</button>
+    </div>
 
-      <!-- <li><a href="#html" data-toggle="tab">HTML</a></li> -->
+    <ul class="nav-tabs navbar-right">
+      <li><a> 
+          <% if hack.user %>
+            <%= "Created by: #{hack.user.first_name}" %>
+          <% end %>
+        </a>
+      </li>
+      <li>
+        <a> <%= link_to "Edit", edit_hack_path(hack) %></a>
+      </li>
     </ul>
   </ul>
 

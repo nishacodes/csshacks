@@ -52,22 +52,6 @@ a.btn:visited {
   color: white; // override bootstrap
 }
 
-// .btn:active {
-//   background-color: $maincolor;
-// }
-
-// .btn-gray {
-//   background-color: $btngray;
-//   &:hover {
-//     background-color: $maincolor;
-//   }
-// }
-
-// .new-button {
-//   position: relative;
-//   margin: 5px 10px;
-//   display: inline;
-// }
 
 
 // ASSET STYLES
@@ -96,7 +80,7 @@ h2 { /*title of entry*/
   font-size: 60px;
   text-align: center;
   letter-spacing: 2px;  
-  padding: 30px 0px 30px 0px;
+  padding: 20px 0px 30px 0px;
   // margin-top: 60px;
   font-weight: 100;
 }
@@ -107,6 +91,16 @@ h4 {/* html, css headings*/
 
 a {
   color: $maincolor;
+  &:hover {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: $maincolorlight;
+  }
+}
+
+.form-wrapper {
+  padding: 20px;
 }
 
 // NAV STYLES
@@ -115,7 +109,8 @@ a.brand {
   font-size: 1.5em;
 }
 
-.nav-main li a {
+
+.nav-main>li>a {
   border-top: solid 3px rgba(0,0,0,0);
   color: black;
   font-family: $mainfont;
@@ -129,11 +124,23 @@ a.brand {
   }
 }
 
+// override bootstrap colors
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus,
+.nav .open > a:active {
+  background-color: inherit;
+  border-color: black;
+}
+
 .nav li button a {
   border: none;
   text-decoration: none;
 }
 
+ul.dropdown-menu {
+  background-color: rgba(255,255,255, 0.98);
+}
 
 .btn.tab {
   border: solid 1px white;
@@ -149,6 +156,24 @@ a.brand {
 .alert {
   margin-bottom: 0;
 }
+
+ul.hack-options{
+ // background-color: blue;
+ display: inline-block;
+ width: 100%;
+}
+
+ul.hack-options li {
+  // background-color: red;
+  // vertical-align: bottom;
+  padding: 10px;
+  font-size: 12pt;
+}
+
+.nav-tabs > li > a {
+  border: none;
+}
+
 // SCAFFOLDING
 
 .navbar, .navbar-default, .navbar-header {
@@ -156,7 +181,7 @@ a.brand {
   -moz-box-shadow:    0px 7px 11px rgba(50, 50, 50, 0.37);
   box-shadow:         0px 7px 11px rgba(50, 50, 50, 0.37);
   border-radius: 0;
-  background-color: rgba(255,255,255, 0.95);
+  background-color: rgba(255,255,255, 0.98);
   position: fixed;
   width: 100%;
   z-index: 100;
