@@ -67,4 +67,6 @@ Csshacks::Application.configure do
 
   # default_url_options for devise CHANGE WHEN DEPLOYED
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  RAILS_ENV=production bundle exec rake assets:precompile
 end
