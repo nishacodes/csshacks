@@ -43,7 +43,7 @@ class HacksController < ApplicationController
   def create
     @hack = Hack.new(params[:hack])
     @hack.html_display = @hack.format_html
-    @hack.css = @hack.nest_css
+    # @hack.css = @hack.nest_css
     @hack.user_id = current_user.id
 
     respond_to do |format|

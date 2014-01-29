@@ -12,7 +12,4 @@ class Hack < ActiveRecord::Base
   def nest_css
     ".style-container {" + css + "}"
   end
-
-  
-
 end
