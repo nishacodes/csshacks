@@ -4,13 +4,14 @@
     <title>CSS Hacks</title>
     <!-- FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Nixie+One|Parisienne|Gilda+Display|Oleo+Script+Swash+Caps|Simonetta|PT+Mono|Josefin+Sans|Londrina+Outline|Alegreya+Sans|Open+Sans+Condensed:300|Open+Sans|Varela+Round|Amatic+SC|Text+Me+One' rel='stylesheet' type='text/css'>
+    <!-- PRETTYPRINT For Syntax Highlighting -->
+    <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" type="text/css" rel="stylesheet"/>
     <!-- STYLESHEETS -->
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= stylesheet_link_tag "normalize_styles", :media => "all" %>
     <%= stylesheet_link_tag "bootstrap.min", :media => "all" %>
     <%= stylesheet_link_tag "styles", :media => "all" %>
-    <!-- PRETTYPRINT For Syntax Highlighting -->
-    <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" type="text/css" rel="stylesheet"/>
+
     <%= csrf_meta_tags %>
   </head>
 
@@ -26,7 +27,9 @@
     
     <script type="text/javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
     <body onload="prettyPrint()">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <%= javascript_include_tag "bootstrap.min" %>
     <%= javascript_include_tag "application" %>
   </body>
 

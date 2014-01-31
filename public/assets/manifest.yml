@@ -1,8 +1,15 @@
 ---
-arrow-left.png: arrow-left-3d0c83c9863fecbea77f111f954101cc.png
-arrow-right.png: arrow-right-8a075b322b78b16a1bfaefd1e129c6ee.png
-heading.png: heading-d9297088bcf2c83620d29b66acd72605.png
-welcome.jpg: welcome-f2172b98dbee9b5a2b942544e6b4bba0.jpg
-application.js: application-7270767b2a9e9fff880aa5de378ca791.js
-application.css: application-7270767b2a9e9fff880aa5de378ca791.css
-jquery.min.map: jquery.min-00cb0c1709393f382013d1f037fc6cde.map
+arrow-left.png: arrow-left-bf741adabec6783a342abbd26066d079.png
+arrow-left/index.png: arrow-left-bf741adabec6783a342abbd26066d079.png
+arrow-right.png: arrow-right-02ee8042677bade63df161ddcd5cdef4.png
+arrow-right/index.png: arrow-right-02ee8042677bade63df161ddcd5cdef4.png
+heading.png: heading-36348b602ac092dbaaf471a50cb90a03.png
+heading/index.png: heading-36348b602ac092dbaaf471a50cb90a03.png
+welcome.jpg: welcome-cf17228c790d66090a6d5137bf715ea4.jpg
+welcome/index.jpg: welcome-cf17228c790d66090a6d5137bf715ea4.jpg
+application.js: application-9cb4fe9390963663cbb06b1fa5fc64c4.js
+application/index.js: application-9cb4fe9390963663cbb06b1fa5fc64c4.js
+application.css: application-dd0521aa2a228d0e03505126c47bb5f7.css
+application/index.css: application-dd0521aa2a228d0e03505126c47bb5f7.css
+jquery.min.map: jquery.min-8b58c0fbf303b938d8e749262f7e50dd.map
+jquery/index.min.map: jquery.min-8b58c0fbf303b938d8e749262f7e50dd.map
